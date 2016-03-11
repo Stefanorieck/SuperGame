@@ -1,15 +1,14 @@
-package com.example.rieck.supergame;
+package com.example.rieck.supergame.world;
 
 import android.content.Context;
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.Paint;
-import android.view.View;
+import android.view.SurfaceView;
 
 /**
  * Created by rieck on 11.03.2016.
  */
-public class WorldView extends View {
+public class WorldView extends SurfaceView {
 
     Paint paint = new Paint();
 
@@ -19,7 +18,14 @@ public class WorldView extends View {
 
     @Override
     protected void onDraw(Canvas canvas) {
-        paint.setColor(Color.CYAN);
+
+        Character hero = new Character(getResources(), canvas);
+        hero.draw();
+        hero.moveDown();
+        hero.moveDown();
+        hero.moveUp();
+
+        /*paint.setColor(Color.CYAN);
         for (int y=1; y <= 10; y++) {
             if (y % 2 == 0)
                 paint.setColor(Color.BLUE);
@@ -30,7 +36,7 @@ public class WorldView extends View {
             }
         }
 
-        canvas.drawRect(150, 150, 151, 151, paint);
+        canvas.drawRect(150, 150, 151, 151, paint);*/
 
 
     }

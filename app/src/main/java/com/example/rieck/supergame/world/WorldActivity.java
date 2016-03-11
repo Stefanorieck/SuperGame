@@ -1,7 +1,6 @@
-package com.example.rieck.supergame;
+package com.example.rieck.supergame.world;
 
 import android.graphics.Color;
-import android.graphics.Paint;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
